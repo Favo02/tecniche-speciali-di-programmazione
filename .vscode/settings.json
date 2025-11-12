@@ -1,0 +1,11 @@
+{
+  "java.project.sourcePaths": ["."],
+  "java.project.referencedLibraries": [
+    "javassist/javassist.jar",
+    "aspectj/aspectjrt.jar",
+    "aspectj/aspectjweaver.jar",
+    "bcel/bcel-6.11.0.jar",
+    "bcel/commons-io-2.21.0.jar",
+    "bcel/commons-lang3-3.19.0.jar"
+  ]
+}
