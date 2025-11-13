@@ -8,12 +8,12 @@ Altrimenti, dalla command palette, `Java: Configure Classpath` ed importare i ja
 
 Compilare prima tutto con `javac *.java` e poi la classe col main `java Main`, capendo se servono argomenti da CLI o meno.
 
-> ![WARNING]
+> [!WARNING]
 > I packages sono il male. Sempre. Mai metterli.
 
 ## Javassist
 
-> ![CAUTION]
+> [!CAUTION]
 > Il manifest deve avere una linea vuota alla fine, altrimenti viene persa l'ultima riga.
 
 ```manifest
@@ -21,8 +21,8 @@ Premain-Class: Premain
 \n <-- importante!!!!
 ```
 
-> ![NOTE]
-> Assumendo che javassist.jar sia installato nella stessa cartella padre del progetto `../`.
+> [!NOTE]
+> Assumendo che il jar di javassist.jar sia nella stessa cartella padre del progetto `../`.
 
 ```makefile
 compile:
@@ -45,10 +45,10 @@ BCEL non lo so usare, ma ho capito che oltre al jar di bcel servono altre dipend
 
 ## Aspectj
 
-> ![NOTE]
+> [!NOTE]
 > Assumendo che aspectj sia installato in `/opt/aspectj1.9`.
 
-> ![WARNING]
+> [!WARNING]
 > Nei classpath, la `~` non viene risolta.
 
 ### Compilare con `ajc`
@@ -64,7 +64,7 @@ ajc -21 -cp /opt/aspectj1.9/lib/aspectjrt.jar *.aj *.java
 
 ### Eseguire con `aj`
 
-> ![CAUTION]
+> [!CAUTION]
 > Di default `aj` (che è uno script bash) non include il classpath `.` quando esegue, non trovando quindi le classi nella cartella corrente.
 > Per fixare, modificare manualmente il file `/opt/aspectj1.9/bin/aj`, appendendo `:.` al `-classpath`.
 
